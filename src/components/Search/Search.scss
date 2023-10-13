@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.search{
+    width: 100%;
+    max-width: 80rem;
+    position: relative;
+    
+
+    input{
+      width: 100%;
+      padding: 1rem;
+      border-radius: 0.1rem;
+    }
+
+    button{
+      padding: 1rem;
+      background: $light-gray;
+      position: absolute;
+      cursor: pointer;
+      right: 0;
+      height: 3.5rem;
+      width: 4rem;
+    }
+  
+}
