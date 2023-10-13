@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.search__button{
+  padding: 1rem;
+  background: $light-gray;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  height: 3.5rem;
+  width: 4rem;
+}
