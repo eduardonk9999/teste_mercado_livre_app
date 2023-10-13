@@ -1,3 +1,37 @@
-h1 {
-  color: var(--black);
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+form, input {
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50.2%;
+  }
 }
