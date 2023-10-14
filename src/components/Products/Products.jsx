@@ -6,26 +6,28 @@ import fetchProducts from '../../server/products';
 import ProductCard from '../ProductCard/ProductCard';
 import AppContext from '../../context/Context';
 
+
 function Products() {
   
   const {products, setProducts } = useContext(AppContext);
 
   useEffect(() => {
-    fetchProducts('iphone').then((response) => {
+    fetchProducts('').then((response) => {
       setProducts(response);
     });
   }, []);
 
   return(
     <section className="products container">
-      {console.log(products)}
       <div className="wrapper content_text">
         {
           products.map((product) => 
+     
             <ProductCard 
               key={product.id}
               data={product}
             />
+           
           )
         }
       </div>
