@@ -9,7 +9,9 @@ import './ProductCard.scss';
 
 function ProductCard({ data }) {
 
-  const {title, thumbnail, price} = data;
+  const {title, thumbnail, price, id} = data;
+
+  const linkToDescriptionAPI = `https://api.mercadolibre.com/items/${id}/description`;
 
 
   return(
@@ -33,7 +35,9 @@ function ProductCard({ data }) {
             </span>
           </h2>
           <h3>{title}</h3>
-          
+          <a href={linkToDescriptionAPI} target="_blank" rel="noreferrer">
+            test link ID
+          </a>
         </div>
       </section>
     </>

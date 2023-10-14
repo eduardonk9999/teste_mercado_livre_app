@@ -18,6 +18,7 @@ function Products() {
 
   return(
     <section className="products container">
+      {console.log(products)}
       <div className="wrapper content_text">
         {
           products.map((product) => 

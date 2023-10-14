@@ -6,13 +6,14 @@ import Search from '../Search/Search';
 
 
 
+
 function Header() {
   return(
     <header className="header">
       <div className="wrapper header--flex">
-        <h1>
-          <img src={logoMercadoLivre} alt="Logo Mercado Livre" />
-        </h1>
+       
+        <img src={logoMercadoLivre} alt="Logo Mercado Livre" />
+       
         <Search />
       </div>
    
