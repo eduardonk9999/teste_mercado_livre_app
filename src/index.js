@@ -4,8 +4,9 @@ import ReactDOM from 'react-dom/client';
 import './styles/main.scss';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './routes/Home';
+import ListProducts from './routes/ListProducts/ListProducts';
 import Product from './routes/Product/Product';
-import ProductsList from './routes/ProductsList/ProductsList';
+
 import Provider from './context/Provider';
 
 const router = createBrowserRouter([
@@ -18,9 +19,9 @@ const router = createBrowserRouter([
     element: <Product />,
   },
   {
-    path: 'ProductsList',
-    element: <ProductsList />,
-  }
+    path: 'listproducts/:product',
+    element: <ListProducts />,
+  },
 ]);
 
 

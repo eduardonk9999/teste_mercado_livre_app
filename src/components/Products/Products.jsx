@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-
+import PropTypes from 'prop-types'; 
 
 import './Products.scss';
 import fetchProducts from '../../server/products';
@@ -7,15 +7,27 @@ import ProductCard from '../ProductCard/ProductCard';
 import AppContext from '../../context/Context';
 import { Link } from 'react-router-dom';
 
-function Products() {
-  
+
+function Products({ productList }) {
+
   const {products, setProducts } = useContext(AppContext);
 
+
+
   useEffect(() => {
-    fetchProducts('').then((response) => {
-      setProducts(response);
-    });
-  }, []);
+    if(productList) {
+      fetchProducts(productList).then((response) => {
+        setProducts(response);
+      });
+    }
+  }, [productList, setProducts]);
+
+
+  useEffect(() => {
+    setProducts(products);
+
+  }, [products]);
+
 
   return(
     <section className="products container">
@@ -30,9 +42,13 @@ function Products() {
           )
         }
       </div>
+     
     </section>
   );
 }
 
 export default Products;
 
+Products.propTypes = {
+  productList: PropTypes.string,
+};
