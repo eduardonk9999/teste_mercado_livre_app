@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import './Search.scss';
 import ButtonSearch from '../ButtonSearch/ButtonSearch';
@@ -8,6 +9,7 @@ import fetchProducts from '../../server/products';
 
 function Search() {
   const [searchValue, setSearchValue] = useState('');
+  let navigate = useNavigate();
 
   const { setProducts } = useContext(AppContext);
 
@@ -15,9 +17,11 @@ function Search() {
     event.preventDefault();
 
     const products = await fetchProducts(searchValue);
+    {console.log(products);}
 
-    setProducts(products);
     setSearchValue('');
+    navigate('/ProductsList');
+    setProducts(products);
   };
 
 
@@ -35,6 +39,8 @@ function Search() {
         }}
       
       />
+
+  
       <ButtonSearch />
     </form>
   );

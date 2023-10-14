@@ -5,7 +5,7 @@ import './Products.scss';
 import fetchProducts from '../../server/products';
 import ProductCard from '../ProductCard/ProductCard';
 import AppContext from '../../context/Context';
-
+import { Link } from 'react-router-dom';
 
 function Products() {
   
@@ -22,12 +22,11 @@ function Products() {
       <div className="wrapper content_text">
         {
           products.map((product) => 
-     
-            <ProductCard 
-              key={product.id}
-              data={product}
-            />
-           
+            <Link to={`/product/${product.id}`} key={product.id}>
+              <ProductCard 
+                data={product}
+              />
+            </Link>
           )
         }
       </div>

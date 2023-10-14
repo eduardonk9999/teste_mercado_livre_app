@@ -10,6 +10,7 @@ function App() {
     <Provider>
       <Header />
       <Products />
+      
     </Provider>
   );
 }

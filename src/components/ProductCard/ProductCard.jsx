@@ -8,17 +8,17 @@ import './ProductCard.scss';
 import { Link } from 'react-router-dom';
 
 
+
 function ProductCard({ data }) {
 
   const {title, thumbnail, price, id} = data;
 
-  console.log(id);
-
 
 
   return(
-    <>
-      <section className="product">
+    <>  
+     
+      <section className="product wrapper">
         <img src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')} />
         <div className="price_container">
           <h2>
