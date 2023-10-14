@@ -5,13 +5,13 @@ import shipping from '../../assets/ic_shipping.png';
 import format from '../../utils/format';
 
 import './ProductCard.scss';
-import { Link } from 'react-router-dom';
+
 
 
 
 function ProductCard({ data }) {
 
-  const {title, thumbnail, price, id} = data;
+  const {title, thumbnail, price} = data;
 
 
 
@@ -37,11 +37,6 @@ function ProductCard({ data }) {
             </span>
           </h2>
           <h3>{title}</h3>
-          <Link to={`/product/${id}`} >
-           
-            test link ID
-            
-          </Link>
         </div>
       </section>
     </>
