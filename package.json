@@ -14,10 +14,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start sass src/App.scss src/App.css",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-css": "sass src/App.scss src/App.css"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +42,8 @@
     "eslint": "^8.51.0",
     "eslint-plugin-react": "^7.33.2",
     "sass": "^1.69.3"
+  },
+  "engines": {
+    "node": "14.21.3"
   }
 }
