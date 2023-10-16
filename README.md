@@ -1,6 +1,4 @@
-# Nome da Sua Aplicação
-
-Descrição da sua aplicação.
+# Mercado Livre APP
 
 ## Requisitos
 
