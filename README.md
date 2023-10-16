@@ -25,5 +25,5 @@ Certifique-se de ter os seguintes requisitos instalados:
 3. Inicialize os contêineres Docker (isso também construirá a imagem da aplicação):
  <p>docker-compose up --build</p> 
 
-###Rodando os Testes
+## Rodando os Testes
  <p>npm test -- src/components</p> 
