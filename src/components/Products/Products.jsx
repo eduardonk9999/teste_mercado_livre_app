@@ -15,18 +15,16 @@ function Products({ productList }) {
 
 
   useEffect(() => {
-    if(productList) {
-      fetchProducts(productList).then((response) => {
-        setProducts(response);
-      });
+    if (productList) {
+      fetchProducts(productList)
+        .then((response) => {
+          setProducts(response);
+        })
+        .catch((error) => {
+          console.error('Error fetching products:', error);
+        });
     }
-  }, [productList, setProducts]);
-
-
-  useEffect(() => {
-    setProducts(products);
-
-  }, [products]);
+  }, [productList]);
 
 
   return(
